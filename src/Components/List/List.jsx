@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { RiAddLargeLine } from "react-icons/ri";
 import { TiMinus } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
-import Input from "../Input/input";
+import Input from "../Input/Input";
 
 const List = ({ isLightMode }) => {
   const storedItems = JSON.parse(localStorage.getItem("handleData")) || [];
