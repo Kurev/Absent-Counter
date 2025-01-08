@@ -1,4 +1,3 @@
-import Footer from './Components/Footer/footer';
 import List from './Components/List/List';
 import Navbar from './Components/Navbar/Navbar';
 import React, { useState } from 'react';
@@ -27,7 +26,6 @@ function App() {
         >
           <List isLightMode={isLightMode} />
         </div>
-        <Footer />
       </div>
     </>
   );
