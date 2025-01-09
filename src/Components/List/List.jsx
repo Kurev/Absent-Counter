@@ -15,12 +15,8 @@ const List = ({ isLightMode }) => {
   const incrementAbsent = (index) => {
     const updatedIncrementList = [...list];
     updatedIncrementList[index].initialAbsent += 1;
-    if (
-      updatedIncrementList[index].initialAbsent >=
-      updatedIncrementList[index].maxAbsent
-    ) {
-      updatedIncrementList[index].initialAbsent =
-        updatedIncrementList[index].maxAbsent;
+    if ( updatedIncrementList[index].initialAbsent >= updatedIncrementList[index].maxAbsent) {
+      updatedIncrementList[index].initialAbsent = updatedIncrementList[index].maxAbsent;
     }
     setList(updatedIncrementList);
   };
@@ -79,12 +75,12 @@ const List = ({ isLightMode }) => {
         >
           {/* Delete Button */}
           <button
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 p-1 rounded-xl opacity-0 group-hover:opacity-100 group-hover:-translate-y-8 transition-all duration-300 ${
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 p-1 rounded-xl opacity-0 group-hover:opacity-100 group-hover:-translate-y-8 transition-all duration-300 sm:text-[15px] ${
               isLightMode ? "bg-red-400 text-black" : "bg-red-500 text-white"
             }`}
             onClick={() => handleDelete(index)}
           >
-            <h1 className="text-[25px] cursor-pointer">
+            <h1 className="text-[25px] cursor-pointer max-sm:text-[18px]">
               <TiDelete />
             </h1>
           </button>
